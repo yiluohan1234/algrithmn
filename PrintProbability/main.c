@@ -13,8 +13,13 @@
 
 int main()
 {
+	int ret = 0;
 	int number = 2;
-	PrintProbability(number);
+	ret = PrintProbability(number);
+	if (ret == -1)
+	{
+		printf("func PrintProbability() err:%d,input:%d\n", ret, number);
+	}
 
 	return 0;
 }

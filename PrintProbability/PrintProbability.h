@@ -12,9 +12,9 @@
 #include <stdlib.h>
 #include <math.h>
 
-void PrintProbability(int number);
-void Probability(int number, int *pProbability);
-void Prob(int original, int current, int sum, int *pProbability);
+int PrintProbability(int number);
+int Probability(int number, int *pProbability);
+int Prob(int original, int current, int sum, int *pProbability);
 
 
 #endif
