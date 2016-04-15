@@ -32,6 +32,15 @@ void Test1()
 	ConnectTreeNodes(pNode5, pNode7, NULL);
 
 	Test(pNode1, 4);
+	if (IsBalanced1(pNode1))
+	{
+		printf("this is a balanced tree.\n");
+
+	}
+	else
+	{
+		printf("this is not a balanced tree.\n");
+	}
 	DestroyTree(pNode1);
 	printf("end!\n");
 }
