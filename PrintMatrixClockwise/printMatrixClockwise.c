@@ -5,16 +5,21 @@
 	> Created Time: 2016年05月13日 星期五 10时11分51秒
  ************************************************************************/
 #include "printMatrixClockwise.h"
+/*
+ * 输入一个矩阵，按照从外到里以顺时针的顺序依次打印每一个数字
+ * */
 void printMatrixInCircle(int **numbers, int columns, int rows, int start)
 {
 	int columnsLen = columns - 1 - start;
 	int rowsLen = rows - 1 - start;
 	int i = 0;
+	//打印第一行
 	for (i = start; i <=columnsLen; i++)
 	{
 		int number = numbers[start][i];
 	    printf("%d ", number);	
 	}
+	//打印最后一列
 	if (start < rowsLen)
 	{
 		for ( i = start + 1; i <= rowsLen; i++ )
@@ -23,6 +28,7 @@ void printMatrixInCircle(int **numbers, int columns, int rows, int start)
 			printf("%d ", number);
 		}
 	}
+	//打印最后一行
 	if (start < rowsLen && start <columnsLen)
 	{
 		for (i = columnsLen - 1; i >= start; i--)
@@ -31,6 +37,7 @@ void printMatrixInCircle(int **numbers, int columns, int rows, int start)
 			printf("%d ", number);
 		}
 	}
+	//打印第一列
 	if (start < rowsLen - 1 && start < columnsLen)
 	{
 		for (i = rowsLen - 1; i > start; i--)
