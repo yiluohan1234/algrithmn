@@ -12,8 +12,16 @@ int main()
 	int ret = binarySearch(data, 8, 11);
 	printf("二分查找原始算法:%d\n", ret);
 
-	int x = 6;
+	int x;
+	printf("请输入一个整数:");
+	scanf("%d",&x);
 	int ret_sqrt = mySqrt(x);
 	printf("%d的平方根为:%d\n",x, ret_sqrt);
+	char letters[] = {'c', 'f', 'j'};
+    char ret_letter = nextGreatestLetter(letters, 3, 'k');
+	printf("大于给定最小字符:%c\n", ret_letter);
+	int noneDuplicate[] = {1, 1, 2, 3, 3, 4, 4, 8, 8};
+	int ret_none_duplicat = singleNonDuplicate(noneDuplicate, 9);
+	printf("没有重复的数字是:%d\n", ret_none_duplicat);
 	return 0;
 }

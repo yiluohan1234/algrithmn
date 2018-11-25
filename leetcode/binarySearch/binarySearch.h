@@ -14,4 +14,7 @@
 
 int binarySearch(int *data, int length, int key);
 int mySqrt(int x);
+char nextGreatestLetter(char *data, int length , char target);
+int singleNonDuplicate(int *data, int length);
+
 #endif
