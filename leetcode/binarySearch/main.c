@@ -23,5 +23,8 @@ int main()
 	int noneDuplicate[] = {1, 1, 2, 3, 3, 4, 4, 8, 8};
 	int ret_none_duplicat = singleNonDuplicate(noneDuplicate, 9);
 	printf("没有重复的数字是:%d\n", ret_none_duplicat);
+	int findmin[] = {3, 4, 5, 1, 2};
+	int ret_findmin = findMin(findmin, 5);
+	printf("旋转数组中的最小数字:%d\n", ret_findmin);
 	return 0;
 }

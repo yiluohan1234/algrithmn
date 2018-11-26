@@ -94,3 +94,50 @@ int singleNonDuplicate(int *data, int length)
 	}
 	return data[l];
 }
+int isBadVersion(int n)
+{
+	if (n > 0)
+	{
+		return 1;
+	}
+	else
+		return 0;
+}
+/*
+ * leetcode 278. First Bad Version (Easy)
+ * 题目描述：给定一个元素 n 代表有 [1, 2, ..., n] 版本，可以调用 isBadVersion(int x) 知道某个版本是否错误，要求找到第一个错误的版本。
+ * 如果第 m 个版本出错，则表示第一个错误的版本在 [l, m] 之间，令 h = m；否则第一个错误的版本在 [m + 1, h] 之间，令 l = m + 1。
+ */
+int firstBadVersion(int n)
+{
+	int l = 1;
+	int h = n;
+	while (l < h)
+	{
+		int mid = l + (h - l)/2;
+		if (isBadVersion(mid)){
+			h = mid;
+		}
+		else
+			l = mid + 1;
+	}
+	return l;
+}
+/*
+ * leetcode 153. Find Minimum in Rotated Sorted Array (Medium)
+ * 题目描述：旋转数组的最小数字
+ */
+int findMin(int *data, int length)
+{
+	int l = 0;
+	int h = length - 1;
+	while (l < h)
+	{
+		int m = l + (h - l)/2;
+		if (data[m] < data[h])
+			h = m;
+		else
+			l = m + 1;
+	}
+	return data[l];
+}

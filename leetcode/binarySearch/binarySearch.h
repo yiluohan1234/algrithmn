@@ -16,5 +16,7 @@ int binarySearch(int *data, int length, int key);
 int mySqrt(int x);
 char nextGreatestLetter(char *data, int length , char target);
 int singleNonDuplicate(int *data, int length);
-
+int firstBadVersion(int n);
+int isBadVersion(int n);
+int findMin(int *data, int length);
 #endif
